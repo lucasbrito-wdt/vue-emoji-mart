@@ -4,7 +4,7 @@ Thanks for taking the time to contribute. This document covers everything you ne
 
 ## Getting started
 
-This is a pnpm workspace with two packages (`@vue-emoji-mart/core`, `@vue-emoji-mart/data`) and one example app.
+This is a pnpm workspace with two packages (`@luquinhasbrito/vue-emoji-mart`, `@luquinhasbrito/emoji-mart-data`) and one example app.
 
 ```bash
 git clone https://github.com/lucasbrito/vue-emoji-mart.git
@@ -20,7 +20,7 @@ pnpm test           # run the Vitest suite across all packages
 pnpm lint           # type-check all packages (vue-tsc --noEmit)
 pnpm dev            # watch-build all packages
 
-pnpm --filter @vue-emoji-mart/core test     # scope any command to one package
+pnpm --filter @luquinhasbrito/vue-emoji-mart test     # scope any command to one package
 pnpm --filter vite-demo dev                 # run the example app
 ```
 
@@ -29,7 +29,7 @@ pnpm --filter vite-demo dev                 # run the example app
 ```
 vue-emoji-mart/
 ├── packages/
-│   ├── vue-emoji-mart/        # @vue-emoji-mart/core — Picker component, composables, helpers
+│   ├── vue-emoji-mart/        # @luquinhasbrito/vue-emoji-mart — Picker component, composables, helpers
 │   │   ├── src/
 │   │   │   ├── components/    # Picker.vue and its subcomponents
 │   │   │   ├── composables/   # useEmojiGrid, useRowVirtualizer, useSearch, ...
@@ -37,7 +37,7 @@ vue-emoji-mart/
 │   │   │   ├── types/         # picker-props.ts, emoji-props.ts
 │   │   │   └── styles/        # picker.scss, tokens.scss
 │   │   └── __tests__/
-│   └── data/                  # @vue-emoji-mart/data — emoji datasets and i18n
+│   └── data/                  # @luquinhasbrito/emoji-mart-data — emoji datasets and i18n
 └── examples/vite-demo/        # manual QA app
 ```
 

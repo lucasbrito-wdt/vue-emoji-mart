@@ -34,16 +34,16 @@
 ### Install
 
 ```bash
-pnpm add @vue-emoji-mart/core @vue-emoji-mart/data
+pnpm add @luquinhasbrito/vue-emoji-mart @luquinhasbrito/emoji-mart-data
 ```
 
 ### As a component
 
 ```vue
 <script setup lang="ts">
-import { Picker } from '@vue-emoji-mart/core'
-import '@vue-emoji-mart/core/style.css'
-import data from '@vue-emoji-mart/data'
+import { Picker } from '@luquinhasbrito/vue-emoji-mart'
+import '@luquinhasbrito/vue-emoji-mart/style.css'
+import data from '@luquinhasbrito/emoji-mart-data'
 
 function onSelect(emoji: { native: string }) {
   console.log(emoji.native)
@@ -58,10 +58,10 @@ function onSelect(emoji: { native: string }) {
 ### As a custom element
 
 ```ts
-import '@vue-emoji-mart/core/custom-element'
-import '@vue-emoji-mart/core/style.css'
-import data from '@vue-emoji-mart/data'
-import { init } from '@vue-emoji-mart/core'
+import '@luquinhasbrito/vue-emoji-mart/custom-element'
+import '@luquinhasbrito/vue-emoji-mart/style.css'
+import data from '@luquinhasbrito/emoji-mart-data'
+import { init } from '@luquinhasbrito/vue-emoji-mart'
 
 init({ data })
 ```
@@ -79,7 +79,7 @@ The most commonly used `<Picker>` props — the full list lives in [`packages/vu
 
 | Prop | Default | Choices | Description |
 | --- | --- | --- | --- |
-| `data` | — | — | Emoji dataset, required (from `@vue-emoji-mart/data` or your own) |
+| `data` | — | — | Emoji dataset, required (from `@luquinhasbrito/emoji-mart-data` or your own) |
 | `set` | `native` | `native`, `apple`, `facebook`, `google`, `twitter` | Emoji rendering set; `native` is the most performant |
 | `theme` | `auto` | `auto`, `light`, `dark` | Color theme |
 | `locale` | `en` | 22 locales — see [`packages/data/i18n`](./packages/data/i18n) | UI language |
@@ -110,8 +110,8 @@ The port preserves every optimization from the original Preact implementation, t
 ```
 vue-emoji-mart/
 ├── packages/
-│   ├── vue-emoji-mart/     # @vue-emoji-mart/core — the Picker component, composables, and helpers
-│   └── data/               # @vue-emoji-mart/data — emoji datasets and i18n locale files
+│   ├── vue-emoji-mart/     # @luquinhasbrito/vue-emoji-mart — the Picker component, composables, and helpers
+│   └── data/               # @luquinhasbrito/emoji-mart-data — emoji datasets and i18n locale files
 └── examples/
     └── vite-demo/          # minimal Vite app for manual QA
 ```

@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import '@vue-emoji-mart/core/style.css'
+import '@luquinhasbrito/vue-emoji-mart/style.css'
 
 const app = createApp(App)
 

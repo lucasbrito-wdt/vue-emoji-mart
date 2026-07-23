@@ -1,13 +1,19 @@
 {
-  "name": "@vue-emoji-mart/data",
-  "version": "0.0.1",
+  "name": "@luquinhasbrito/emoji-mart-data",
+  "version": "0.1.0",
   "description": "Data for Vue Emoji Mart; emoji picker data for Vue 3",
   "license": "MIT",
-  "homepage": "https://github.com/missive/emoji-mart",
+  "homepage": "https://github.com/lucasbrito-wdt/vue-emoji-mart/tree/main/packages/data#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/missive/emoji-mart",
-    "directory": "packages/emoji-mart-data"
+    "url": "https://github.com/lucasbrito-wdt/vue-emoji-mart.git",
+    "directory": "packages/data"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasbrito-wdt/vue-emoji-mart/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "main": "sets/15/native.json",
   "types": "index.d.ts",

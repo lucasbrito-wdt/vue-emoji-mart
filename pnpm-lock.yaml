@@ -10,12 +10,12 @@ importers:
 
   examples/vite-demo:
     dependencies:
-      '@vue-emoji-mart/core':
-        specifier: workspace:*
-        version: link:../../packages/vue-emoji-mart
-      '@vue-emoji-mart/data':
+      '@luquinhasbrito/emoji-mart-data':
         specifier: workspace:*
         version: link:../../packages/data
+      '@luquinhasbrito/vue-emoji-mart':
+        specifier: workspace:*
+        version: link:../../packages/vue-emoji-mart
       vue:
         specifier: ^3.5.0
         version: 3.5.40(typescript@5.9.3)
@@ -37,7 +37,7 @@ importers:
 
   packages/vue-emoji-mart:
     dependencies:
-      '@vue-emoji-mart/data':
+      '@luquinhasbrito/emoji-mart-data':
         specifier: workspace:*
         version: link:../data
     devDependencies:

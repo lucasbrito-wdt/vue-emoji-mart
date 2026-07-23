@@ -34,8 +34,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build library (@vue-emoji-mart/core)
-        run: pnpm --filter @vue-emoji-mart/core run build
+      - name: Build library (@luquinhasbrito/vue-emoji-mart)
+        run: pnpm --filter @luquinhasbrito/vue-emoji-mart run build
 
       - name: Build examples/vite-demo
         run: pnpm --filter vue-emoji-mart-vite-demo run build

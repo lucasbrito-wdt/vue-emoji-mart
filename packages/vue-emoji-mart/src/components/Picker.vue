@@ -492,7 +492,7 @@ onUnmounted(() => {
 <style lang="scss">
 /*
  * Extraído para o build padrão (não custom-element): permite que
- * `import { Picker } from '@vue-emoji-mart/core'` chegue estilizado sem que
+ * `import { Picker } from '@luquinhasbrito/vue-emoji-mart'` chegue estilizado sem que
  * o consumidor precise importar o SCSS fonte manualmente. O custom element
  * (`custom-element.ts`) continua injetando a mesma folha via `?inline` +
  * `adoptedStyleSheets`, então este bloco não é scoped (precisa casar com o

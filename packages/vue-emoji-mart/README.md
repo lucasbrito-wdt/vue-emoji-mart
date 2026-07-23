@@ -1,4 +1,4 @@
-# @vue-emoji-mart/core
+# @luquinhasbrito/vue-emoji-mart
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../../LICENSE)
 [![Vue 3](https://img.shields.io/badge/vue-3.x-42b883.svg?logo=vue.js&logoColor=white)](https://vuejs.org)
@@ -8,7 +8,7 @@ The Vue 3 emoji picker component, composables, and framework-agnostic helpers. A
 ## Install
 
 ```bash
-pnpm add @vue-emoji-mart/core @vue-emoji-mart/data
+pnpm add @luquinhasbrito/vue-emoji-mart @luquinhasbrito/emoji-mart-data
 ```
 
 `vue` `^3.5.0` is a peer dependency.
@@ -20,14 +20,14 @@ Emoji data is decoupled from the picker, so you control how and when it loads.
 ### Bundled
 
 ```ts
-import data from '@vue-emoji-mart/data'
-import { Picker } from '@vue-emoji-mart/core'
+import data from '@luquinhasbrito/emoji-mart-data'
+import { Picker } from '@luquinhasbrito/vue-emoji-mart'
 ```
 
 ### Fetched remotely
 
 ```ts
-import { Picker } from '@vue-emoji-mart/core'
+import { Picker } from '@luquinhasbrito/vue-emoji-mart'
 
 const data = async () => {
   const response = await fetch('https://your-cdn.example.com/emoji-data.json')
@@ -41,10 +41,10 @@ Pass either form directly as the `data` prop, or call `init({ data })` once per 
 
 ```vue
 <script setup lang="ts">
-import { Picker } from '@vue-emoji-mart/core'
-import '@vue-emoji-mart/core/style.css'
-import data from '@vue-emoji-mart/data'
-import type { EmojiData } from '@vue-emoji-mart/core'
+import { Picker } from '@luquinhasbrito/vue-emoji-mart'
+import '@luquinhasbrito/vue-emoji-mart/style.css'
+import data from '@luquinhasbrito/emoji-mart-data'
+import type { EmojiData } from '@luquinhasbrito/vue-emoji-mart'
 
 function onSelect(emoji: EmojiData, event: Event) {
   console.log(emoji.native)
@@ -131,7 +131,7 @@ const custom = [
 
 ```vue
 <script setup lang="ts">
-import { Emoji } from '@vue-emoji-mart/core'
+import { Emoji } from '@luquinhasbrito/vue-emoji-mart'
 </script>
 
 <template>
@@ -154,8 +154,8 @@ import { Emoji } from '@vue-emoji-mart/core'
 ## Custom element
 
 ```ts
-import '@vue-emoji-mart/core/custom-element'
-import '@vue-emoji-mart/core/style.css'
+import '@luquinhasbrito/vue-emoji-mart/custom-element'
+import '@luquinhasbrito/vue-emoji-mart/style.css'
 ```
 
 ```html
@@ -168,8 +168,8 @@ Registered with Vue's native `defineCustomElement`, rendered inside a Shadow Roo
 ## Headless search
 
 ```ts
-import { init, SearchIndex } from '@vue-emoji-mart/core'
-import data from '@vue-emoji-mart/data'
+import { init, SearchIndex } from '@luquinhasbrito/vue-emoji-mart'
+import data from '@luquinhasbrito/emoji-mart-data'
 
 await init({ data })
 
@@ -181,8 +181,8 @@ console.log(results.map((emoji) => emoji.skins[0].native))
 ## Get emoji data from a native character
 
 ```ts
-import { init, getEmojiDataFromNative } from '@vue-emoji-mart/core'
-import data from '@vue-emoji-mart/data'
+import { init, getEmojiDataFromNative } from '@luquinhasbrito/vue-emoji-mart'
+import data from '@luquinhasbrito/emoji-mart-data'
 
 await init({ data })
 
@@ -196,12 +196,12 @@ const emoji = await getEmojiDataFromNative('🤞🏿')
 
 ## Sets and data sources
 
-`set` controls how emojis are rendered: `native` uses the OS's built-in emoji font (fastest, no images), while `apple`, `facebook`, `google`, and `twitter` render from spritesheets. Provide `getImageURL`/`getSpritesheetURL` to point at a self-hosted copy of `@vue-emoji-mart/data`'s sprite sheets instead of the default CDN.
+`set` controls how emojis are rendered: `native` uses the OS's built-in emoji font (fastest, no images), while `apple`, `facebook`, `google`, and `twitter` render from spritesheets. Provide `getImageURL`/`getSpritesheetURL` to point at a self-hosted copy of `@luquinhasbrito/emoji-mart-data`'s sprite sheets instead of the default CDN.
 
 ## Internationalization
 
 ```ts
-import i18n from '@vue-emoji-mart/data/i18n/pt.json'
+import i18n from '@luquinhasbrito/emoji-mart-data/i18n/pt.json'
 ```
 
 ```vue
@@ -230,8 +230,8 @@ From the monorepo root:
 
 ```bash
 pnpm install
-pnpm --filter @vue-emoji-mart/core build
-pnpm --filter @vue-emoji-mart/core test
+pnpm --filter @luquinhasbrito/vue-emoji-mart build
+pnpm --filter @luquinhasbrito/vue-emoji-mart test
 ```
 
 ## License

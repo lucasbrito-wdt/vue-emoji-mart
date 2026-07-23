@@ -1,4 +1,4 @@
-import type { Category, Emoji, EmojiMartData, Skin } from '@vue-emoji-mart/data'
+import type { Category, Emoji, EmojiMartData, Skin } from '@luquinhasbrito/emoji-mart-data'
 
 export type { Category, Emoji, EmojiMartData, Skin }
 
@@ -6,7 +6,7 @@ export type { Category, Emoji, EmojiMartData, Skin }
  * `Emoji`/`Skin` augmented with fields that `config.ts`'s `init()` mutates
  * onto the raw data at runtime (search index, aliases, shortcodes...).
  * Port note: the original is `@ts-nocheck`d for this exact reason — these
- * fields don't exist on `@vue-emoji-mart/data`'s static types, they are
+ * fields don't exist on `@luquinhasbrito/emoji-mart-data`'s static types, they are
  * computed once during `init()` and cached on the objects themselves.
  */
 export interface AugmentedSkin extends Skin {
@@ -49,7 +49,7 @@ export interface EmojiData {
   emoticons?: string[]
 }
 
-/** Loaded i18n strings shape (see `@vue-emoji-mart/data/i18n/*.json`). */
+/** Loaded i18n strings shape (see `@luquinhasbrito/emoji-mart-data/i18n/*.json`). */
 export interface I18nData {
   search: string
   search_no_results_1: string

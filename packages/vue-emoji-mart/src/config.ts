@@ -1,6 +1,6 @@
 import { shallowRef, triggerRef } from 'vue'
 
-import i18n_en from '@vue-emoji-mart/data/i18n/en.json'
+import i18n_en from '@luquinhasbrito/emoji-mart-data/i18n/en.json'
 
 import PickerProps from './types/picker-props'
 import { FrequentlyUsed, NativeSupport, SafeFlags, SearchIndex } from './helpers'

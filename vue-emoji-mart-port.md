@@ -73,7 +73,7 @@ vue-emoji-mart/
 │
 ├── packages/
 │   ├── data/
-│   │   ├── package.json               # @vue-emoji-mart/data
+│   │   ├── package.json               # @luquinhasbrito/emoji-mart-data
 │   │   ├── build.js                   # port quase 1:1 de emoji-mart-data/build.js
 │   │   ├── index.d.ts                 # port 1:1 de index.d.ts (EmojiMartData, Emoji, Skin, Sheet...)
 │   │   ├── sets/                      # gerado pelo build.js (1,2,3,4,5,11,12,12.1,13,13.1,14,15 x 5 sets)
@@ -83,7 +83,7 @@ vue-emoji-mart/
 │   │   └── README.md
 │   │
 │   └── vue-emoji-mart/
-│       ├── package.json               # @vue-emoji-mart/core (nome final a definir com usuário)
+│       ├── package.json               # @luquinhasbrito/vue-emoji-mart (nome final a definir com usuário)
 │       ├── vite.config.ts             # 2 builds: lib padrão (Picker.vue export) + custom-element
 │       ├── vitest.config.ts
 │       ├── tsconfig.json

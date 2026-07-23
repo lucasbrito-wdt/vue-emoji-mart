@@ -19,7 +19,7 @@ What you expected to happen.
 
 ## Environment
 
-- `@vue-emoji-mart/core` version:
+- `@luquinhasbrito/vue-emoji-mart` version:
 - Vue version:
 - Browser / OS:
 - Package manager:

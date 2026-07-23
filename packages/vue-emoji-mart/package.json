@@ -1,9 +1,21 @@
 {
-  "name": "@vue-emoji-mart/core",
-  "version": "0.0.1",
+  "name": "@luquinhasbrito/vue-emoji-mart",
+  "version": "0.1.0",
   "description": "Vue 3 emoji picker, ported from emoji-mart",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://github.com/lucasbrito-wdt/vue-emoji-mart/tree/main/packages/vue-emoji-mart#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasbrito-wdt/vue-emoji-mart.git",
+    "directory": "packages/vue-emoji-mart"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasbrito-wdt/vue-emoji-mart/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": [
     "**/*.css",
     "**/*.scss",
@@ -26,19 +38,21 @@
     "./style.css": "./dist/style.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE"
   ],
   "scripts": {
     "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
     "dev": "vite build --watch",
     "test": "vitest run",
-    "lint": "vue-tsc --noEmit -p tsconfig.json"
+    "lint": "vue-tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
     "vue": "^3.5.0"
   },
   "dependencies": {
-    "@vue-emoji-mart/data": "workspace:*"
+    "@luquinhasbrito/emoji-mart-data": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",

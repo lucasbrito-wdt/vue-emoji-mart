@@ -1,6 +1,6 @@
 import { flushPromises, mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, test, vi } from 'vitest'
-import i18nEn from '@vue-emoji-mart/data/i18n/en.json'
+import i18nEn from '@luquinhasbrito/emoji-mart-data/i18n/en.json'
 
 import { createMockEmojiData } from '../fixtures/mock-data'
 

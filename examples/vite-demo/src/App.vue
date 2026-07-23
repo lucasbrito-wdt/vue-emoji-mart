@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { Picker, init } from '@vue-emoji-mart/core'
-import data from '@vue-emoji-mart/data'
+import { Picker, init } from '@luquinhasbrito/vue-emoji-mart'
+import data from '@luquinhasbrito/emoji-mart-data'
 
 const selectedEmoji = ref<any>(null)
 const isInitialized = ref(false)

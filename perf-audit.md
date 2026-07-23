@@ -197,7 +197,7 @@ problema mais sério que o tamanho em si:
   (`import pickerStyles from './styles/picker.scss?inline'`), e
   `custom-element.ts` não é importado por `index.ts` nem é um entry do Vite.
   **Consequência prática: quem consome `import { Picker } from
-  '@vue-emoji-mart/core'` (o caso de uso padrão, não custom element) recebe
+  '@luquinhasbrito/vue-emoji-mart'` (o caso de uso padrão, não custom element) recebe
   o componente sem NENHUM CSS** — o picker renderiza funcionalmente
   quebrado/sem estilo a menos que o consumidor importe manualmente o SCSS
   fonte (`packages/vue-emoji-mart/src/styles/picker.scss`), contornando o
@@ -210,7 +210,7 @@ problema mais sério que o tamanho em si:
 - Dentro do que É buildado, não há gordura óbvia: ícones SVG (`icons.ts`) são
   strings estáticas (baratas, sem VNode overhead, ver comentário
   `icons.ts:1-7`), sem dependência de ícone externa (lucide, heroicons etc.).
-  `dependencies` do `package.json` é só `@vue-emoji-mart/data` (workspace,
+  `dependencies` do `package.json` é só `@luquinhasbrito/emoji-mart-data` (workspace,
   dados sob demanda) — nenhuma lib de terceiro pesada (ex.: sem
   `vue-virtual-scroller`, conforme decisão do plano). `vue-tsc --noEmit`
   não gera `.d.ts` no `dist/` atual (não há `index.d.ts` em `dist/`) —
@@ -247,7 +247,7 @@ problema mais sério que o tamanho em si:
 1. **[Alta] Bundle incompleto — CSS do `<Picker>` padrão nunca é emitido**
    (`vite.config.ts:6-31`, `src/index.ts`, `Picker.vue` sem `<style>`,
    ausência de `dist/style.css`). O export público principal do pacote
-   (`import { Picker } from '@vue-emoji-mart/core'`) não carrega nenhum CSS
+   (`import { Picker } from '@luquinhasbrito/vue-emoji-mart'`) não carrega nenhum CSS
    — o consumidor recebe um picker sem estilo a menos que importe o SCSS
    fonte manualmente. Fix recomendado: adicionar um segundo entry de estilo
    no `vite.config.ts` (ex.: importar `styles/picker.scss` a partir de

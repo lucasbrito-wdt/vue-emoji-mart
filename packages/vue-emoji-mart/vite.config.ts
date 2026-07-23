@@ -33,7 +33,7 @@ export default defineConfig({
       },
       // Nome fixo (sem hash) para casar com o export "./style.css" já
       // declarado no package.json; sem isso o Vite deriva o nome do CSS a
-      // partir do nome do pacote ("@vue-emoji-mart/core" -> core.css).
+      // partir do nome do pacote ("@luquinhasbrito/vue-emoji-mart" -> core.css).
       cssFileName: 'style',
     },
     // Em lib mode com múltiplos entries, extrai todo o CSS gerado (o
