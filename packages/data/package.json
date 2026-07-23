@@ -13,7 +13,14 @@
   "types": "index.d.ts",
   "sideEffects": false,
   "scripts": {
+    "build": "node ./build.js",
     "regen": "node ./build.js"
+  },
+  "devDependencies": {
+    "emoji-datasource": "15.0.1",
+    "emojilib": "3.0.10",
+    "inflection": "2.0.1",
+    "unicode-emoji-json": "0.4.0"
   },
   "exports": {
     ".": {
