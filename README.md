@@ -10,6 +10,8 @@
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f69220.svg?logo=pnpm&logoColor=white)](https://pnpm.io)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
+[Live demo](https://lucasbrito-wdt.github.io/vue-emoji-mart/)
+
 </div>
 
 ---
