@@ -1,0 +1,19 @@
+{
+  "name": "vue-emoji-mart",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Vue 3 emoji picker inspired by emoji-mart",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@vue-emoji-mart/data",
+  "version": "0.0.1",
+  "description": "Data for Vue Emoji Mart; emoji picker data for Vue 3",
+  "license": "MIT",
+  "homepage": "https://github.com/missive/emoji-mart",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/missive/emoji-mart",
+    "directory": "packages/emoji-mart-data"
+  },
+  "main": "sets/15/native.json",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./sets/15/native.json",
+      "default": "./sets/15/native.json"
+    },
+    "./sets/*": "./sets/*",
+    "./i18n/*": "./i18n/*"
+  },
+  "files": [
+    "/i18n",
+    "/sets",
+    "index.d.ts",
+    "LICENSE"
+  ]
+}

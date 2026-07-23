@@ -1,0 +1,56 @@
+:host {
+  --border-radius: 10px;
+  --category-icon-size: 18px;
+  --font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --font-size: 15px;
+
+  --preview-placeholder-size: 21px;
+  --preview-title-size: 1.1em;
+  --preview-subtitle-size: .9em;
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow:
+    0.3px 0.5px 2.7px hsl(var(--shadow-color) / 0.14),
+    0.4px 0.8px 1px -3.2px hsl(var(--shadow-color) / 0.14),
+    1px 2px 2.5px -4.5px hsl(var(--shadow-color) / 0.14);
+}
+
+[data-theme="light"] {
+  --em-rgb-color: var(--rgb-color, 34, 36, 39);
+  --em-rgb-accent: var(--rgb-accent, 34, 102, 237);
+  --em-rgb-background: var(--rgb-background, 255, 255, 255);
+  --em-rgb-input: var(--rgb-input, 255, 255, 255);
+  --em-color-border: var(--color-border, rgba(0, 0, 0, .05));
+  --em-color-border-over: var(--color-border-over, rgba(0, 0, 0, .1));
+}
+
+[data-theme="dark"] {
+  --em-rgb-color: var(--rgb-color, 222, 222, 221);
+  --em-rgb-accent: var(--rgb-accent, 58, 130, 247);
+  --em-rgb-background: var(--rgb-background, 21, 22, 23);
+  --em-rgb-input: var(--rgb-input, 0, 0, 0);
+  --em-color-border: var(--color-border, rgba(255, 255, 255, .1));
+  --em-color-border-over: var(--color-border-over, rgba(255, 255, 255, .2));
+}
+
+#root {
+  --color-a: rgb(var(--em-rgb-color));
+  --color-b: rgba(var(--em-rgb-color), .65);
+  --color-c: rgba(var(--em-rgb-color), .45);
+
+  --padding: 12px;
+  --padding-small: calc(var(--padding) / 2);
+
+  --sidebar-width: 16px;
+
+  --duration: 225ms;
+  --duration-fast: 125ms;
+  --duration-instant: 50ms;
+  --easing: cubic-bezier(.4, .0, .2, 1);
+
+  @media (prefers-reduced-motion) {
+    --duration: 0;
+    --duration-fast: 0;
+    --duration-instant: 0;
+  }
+}

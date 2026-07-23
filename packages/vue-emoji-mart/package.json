@@ -1,0 +1,56 @@
+{
+  "name": "@vue-emoji-mart/core",
+  "version": "0.0.1",
+  "description": "Vue 3 emoji picker, ported from emoji-mart",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss",
+    "./src/custom-element.ts"
+  ],
+  "main": "./dist/vue-emoji-mart.cjs",
+  "module": "./dist/vue-emoji-mart.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-emoji-mart.js",
+      "require": "./dist/vue-emoji-mart.cjs"
+    },
+    "./custom-element": {
+      "types": "./dist/custom-element.d.ts",
+      "import": "./dist/custom-element.js",
+      "require": "./dist/custom-element.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
+    "dev": "vite build --watch",
+    "test": "vitest run",
+    "lint": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@vue-emoji-mart/data": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/language-core": "^3.1.8",
+    "happy-dom": "^15.11.7",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^5.0.3",
+    "vitest": "^2.1.8",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.0"
+  }
+}
