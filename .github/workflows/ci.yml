@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build library (@vue-emoji-mart/core)
-        run: pnpm --filter @vue-emoji-mart/core... run build
+        run: pnpm --filter @vue-emoji-mart/core run build
 
       - name: Run tests
         run: pnpm --filter @vue-emoji-mart/core run test

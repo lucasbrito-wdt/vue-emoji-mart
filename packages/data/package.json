@@ -13,7 +13,7 @@
   "types": "index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "node ./build.js"
+    "regen": "node ./build.js"
   },
   "exports": {
     ".": {
