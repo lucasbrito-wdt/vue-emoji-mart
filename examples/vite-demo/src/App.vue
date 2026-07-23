@@ -30,7 +30,7 @@ const handleEmojiSelect = (emoji: any) => {
           theme="light"
           :per-line="9"
           :preview-position="'top'"
-          :search-position="'top'"
+          :search-position="'sticky'"
           :nav-position="'bottom'"
           @select="handleEmojiSelect"
         />
